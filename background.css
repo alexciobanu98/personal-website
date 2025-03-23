@@ -1,0 +1,86 @@
+/* Background effects */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0.4;
+}
+
+.gradient-sphere {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.sphere-1 {
+    background: rgba(100, 255, 218, 0.08);
+    width: 500px;
+    height: 500px;
+    top: -100px;
+    right: -100px;
+    animation: float 20s ease-in-out infinite;
+}
+
+.sphere-2 {
+    background: rgba(100, 255, 218, 0.05);
+    width: 300px;
+    height: 300px;
+    bottom: 10%;
+    left: -50px;
+    animation: float 15s ease-in-out infinite reverse;
+}
+
+.sphere-3 {
+    background: rgba(100, 255, 218, 0.03);
+    width: 400px;
+    height: 400px;
+    top: 40%;
+    right: 20%;
+    animation: float 25s ease-in-out infinite;
+}
+
+/* Grid pattern overlay */
+.grid-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(100, 255, 218, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(100, 255, 218, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+/* Noise texture overlay */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANxM8mAAAACHRSTlMABgkMDxIVGCJAIKAAAAAxSURBVDjLY2AYBaNg4AHjAgYGRiEGBjYHBoY0AQaGDgMGhlKB////z/B/1IxRM0YiAACsJQhNXsSRpAAAAABJRU5ErkJggg==');
+    opacity: 0.05;
+    z-index: -1;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-20px, 20px);
+    }
+    50% {
+        transform: translate(20px, -20px);
+    }
+    75% {
+        transform: translate(20px, 20px);
+    }
+}
