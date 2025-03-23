@@ -660,25 +660,49 @@ footer {
     }
 }
 
-/* Skills Section Styles */
-.skills {
-    margin-top: 3rem;
-    padding: 2rem;
+/* About Section Styles */
+.about {
+    padding: 4rem 2rem;
     background: white;
     border-radius: 15px;
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+/* Skills Section Styles */
+.skills-section {
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    margin-bottom: 3rem;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     margin-top: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto 0;
 }
 
 .skill-category {
-    padding: 1.5rem;
+    padding: 1.75rem;
     background: var(--card-bg);
     border-radius: 12px;
     border: 1px solid var(--border-color);
@@ -702,6 +726,7 @@ footer {
 .skill-category:hover {
     border-color: var(--secondary-color);
     box-shadow: 0 4px 12px rgba(0, 112, 243, 0.08);
+    transform: translateY(-2px);
 }
 
 .skill-category:hover::before {
@@ -710,7 +735,7 @@ footer {
 
 .skill-category h4 {
     color: var(--heading-color);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     font-weight: 600;
     display: flex;
@@ -720,7 +745,7 @@ footer {
 
 .skill-category h4 i {
     color: var(--secondary-color);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .skill-category p {
@@ -731,12 +756,24 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .about,
+    .skills-section {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .skill-category {
-        padding: 1.25rem;
+        padding: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 }
 
