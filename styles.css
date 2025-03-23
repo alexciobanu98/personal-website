@@ -660,6 +660,39 @@ footer {
     }
 }
 
+/* Skills Section Styles */
+.skills {
+    margin-top: 2rem;
+}
+
+.skill-category {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateX(5px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0, 112, 243, 0.05);
+}
+
+.skill-category h4 {
+    color: var(--heading-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.skill-category p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
