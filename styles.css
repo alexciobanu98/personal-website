@@ -662,35 +662,82 @@ footer {
 
 /* Skills Section Styles */
 .skills {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .skill-category {
-    margin: 1.5rem 0;
-    padding: 1rem;
+    padding: 1.5rem;
     background: var(--card-bg);
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--secondary-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .skill-category:hover {
-    transform: translateX(5px);
     border-color: var(--secondary-color);
-    box-shadow: 0 2px 4px rgba(0, 112, 243, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 112, 243, 0.08);
+}
+
+.skill-category:hover::before {
+    opacity: 1;
 }
 
 .skill-category h4 {
     color: var(--heading-color);
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.skill-category h4 i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
 }
 
 .skill-category p {
     color: var(--text-color);
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-category {
+        padding: 1.25rem;
+    }
 }
 
 @media (max-width: 768px) {
